@@ -1,0 +1,1104 @@
+/* Recriação fiel do layout da imagem - Clínica ÁPIS */
+/* ====== GERAL ====== */
+:root {
+  --yellow: #f5c727;
+  --teal: #2ca8cb;
+  --purple-dark: #61315a;
+  --purple-mid: #51356c;
+  --blue-hero: #354a97;
+
+  --maxw: 1200px;
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  margin: 0;
+  background: var(--purple-dark);
+  color: #fff;
+}
+
+.container {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* ====== HEADER ====== */
+/* ===== HEADER ESPECIAL PARA A LOGO DA CLÍNICA ÁPIS ===== */
+
+.site-header {
+  width: 100%;
+  padding: 18px 0;
+
+  /* Fundo mais escuro para a logo sobressair */
+  background: linear-gradient(
+    135deg,
+    #3a1842 0%,
+    #4e2559 40%,
+    #61315a 100%
+  );
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo-wrapper {
+  background: #ffffff;
+  border: 3px solid #ffffff;
+  padding: 6px 10px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.25);
+}
+
+.logo-icon {
+  height: 56px;
+}
+
+.brand-area {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+/* === MENU === */
+.nav-links a {
+  color: #ffffff;
+  font-weight: 600;
+  text-decoration: none;
+  margin: 0 14px;
+  font-size: 15px;
+
+  transition: opacity .2s, transform .2s;
+}
+
+.nav-links a:hover {
+  opacity: .75;
+  transform: translateY(-2px);
+}
+
+/* === BOTÃO WHATSAPP === */
+.btn-whats-header {
+  background: var(--yellow);
+  padding: 10px 16px;
+  font-size: 14px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 700;
+  color: #311f00;
+
+  box-shadow: 0 4px 14px rgba(245,199,39,0.45);
+  transition: transform .18s, box-shadow .18s;
+}
+
+.btn-whats-header:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 18px rgba(245,199,39,0.6);
+}
+/* ====== HERO SECTION ====== */
+
+/* ====== HERO SECTION (DEGRADE PERFEITO DO MODELO) ====== */
+
+/* ===== HERO BASE ===== */
+
+.hero {
+  padding: 90px 0;
+  background: linear-gradient(
+    135deg,
+    #3a1842 0%,
+    #61315a 28%,
+    #986094 58%,
+    #2ca8cb 100%
+  );
+  color: #ffffff;
+}
+
+.hero-inner {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 60px;
+  align-items: center;
+}
+
+/* ========== TEXTO ========== */
+
+.hero-title {
+  font-size: 48px;
+  line-height: 1.15;
+  font-weight: 900;
+  margin: 0 0 18px;
+  color: white;
+  text-shadow: 0 4px 18px rgba(0,0,0,0.45);
+}
+
+.hero-highlight {
+  color: #f5c727;
+  display: inline-block;
+}
+
+.hero-sub {
+  font-size: 20px;
+  line-height: 1.55;
+  max-width: 520px;
+  margin: 0 0 28px;
+  color: rgba(255,255,255,0.92);
+  text-shadow: 0 2px 8px rgba(0,0,0,0.35);
+}
+
+/* ========== LISTA COM ÍCONES ========== */
+
+.hero-list {
+  list-style: none;
+  margin: 0 0 32px 0;
+  padding: 0;
+}
+
+.hero-list li {
+  font-size: 18px;
+  margin-bottom: 14px;
+  padding-left: 34px;
+  position: relative;
+  font-weight: 600;
+}
+
+.icon-bullet {
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #f5c727;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+/* ========== BOTÃO CTA ========== */
+
+.btn-hero-cta {
+  background: #f5c727;
+  color: #311f00;
+  padding: 14px 22px;
+  border-radius: 10px;
+  font-size: 18px;
+  font-weight: 800;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+
+  box-shadow: 0 4px 14px rgba(245,199,39,0.4);
+  transition: transform .2s, box-shadow .2s;
+}
+
+.btn-hero-cta:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 20px rgba(245,199,39,0.6);
+}
+
+/* ========== IMAGEM ========== */
+
+.hero-right {
+  display: flex;
+  justify-content: center;
+}
+
+.hero-image-wrapper {
+  background: rgba(255,255,255,0.15);
+  padding: 14px;
+  border-radius: 20px;
+  backdrop-filter: blur(6px);
+  box-shadow: 0 16px 45px rgba(0,0,0,0.45);
+}
+
+.hero-img {
+  width: 100%;
+  max-width: 480px;
+  border-radius: 16px;
+  display: block;
+  box-shadow: 0 18px 50px rgba(0,0,0,0.45);
+}
+
+/* ========== RESPONSIVIDADE ========== */
+
+@media (max-width: 1020px) {
+  .hero-inner {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .hero-right {
+    order: -1;
+  }
+
+  .hero-list li {
+    text-align: left;
+    margin-left: 20%;
+  }
+}
+
+@media (max-width: 640px) {
+  .hero-title {
+    font-size: 34px;
+  }
+
+  .hero-sub {
+    font-size: 17px;
+  }
+
+  .hero-list li {
+    margin-left: 0;
+  }
+
+  .btn-hero-cta {
+    font-size: 16px;
+    width: 100%;
+    text-align: center;
+  }
+
+  .hero-img {
+    max-width: 340px;
+  }
+}
+/* =========================================================
+   SEÇÃO: O QUE É A AVALIAÇÃO NEUROPSICOLÓGICA
+   ========================================================= */
+
+.avaliacao-section {
+  padding: 80px 0;
+  background: linear-gradient(
+    135deg,
+    #4a1e54 0%,
+    #5d2b6b 40%,
+    #6b3477 75%
+  );
+  color: #ffffff;
+}
+
+.avaliacao-inner {
+  text-align: center;
+  max-width: 900px;
+}
+
+/* TÍTULO */
+.avaliacao-title {
+  font-size: 34px;
+  font-weight: 900;
+  margin-bottom: 18px;
+  text-shadow: 0 3px 12px rgba(0,0,0,0.40);
+}
+
+/* SUBTÍTULO */
+.avaliacao-sub {
+  font-size: 18px;
+  color: rgba(255,255,255,0.90);
+  line-height: 1.6;
+  margin: 0 auto 38px auto;
+  max-width: 760px;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.30);
+}
+
+/* CARDS */
+.avaliacao-cards {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 24px;
+  margin-top: 40px;
+}
+
+.avaliacao-card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 28px 24px;
+  color: #1d1d1d;
+  text-align: center;
+  box-shadow: 0 16px 40px rgba(0,0,0,0.14);
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+
+.avaliacao-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 22px 55px rgba(0,0,0,0.18);
+}
+
+/* ÍCONES NOS CARDS */
+.avaliacao-icon {
+  width: 68px;
+  height: 68px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 16px auto;
+  font-size: 30px;
+  font-weight: 900;
+  color: #000;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.15);
+}
+
+/* TEXTO DO CARD */
+.avaliacao-card h3 {
+  margin: 10px 0;
+  font-size: 20px;
+  font-weight: 800;
+  color: #54245e;
+}
+
+.avaliacao-card p {
+  font-size: 15px;
+  color: #333;
+  line-height: 1.45;
+}
+
+/* ===== RESPONSIVO ===== */
+
+@media (max-width: 900px) {
+  .avaliacao-cards {
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+}
+/* =========================================================
+   SEÇÃO: QUEM PODE SE BENEFICIAR
+   ========================================================= */
+
+.beneficia-section {
+  padding: 90px 0;
+  background: linear-gradient(
+    135deg,
+    #5d2a6a 0%,
+    #6f3378 40%,
+    #7c3d86 80%
+  );
+  color: #ffffff;
+}
+
+.beneficia-inner {
+  text-align: center;
+}
+
+/* TÍTULO */
+.beneficia-title {
+  font-size: 34px;
+  font-weight: 900;
+  margin-bottom: 16px;
+  text-shadow: 0 3px 14px rgba(0,0,0,0.45);
+}
+
+/* SUBTÍTULO */
+.beneficia-sub {
+  font-size: 18px;
+  color: rgba(255,255,255,0.88);
+  max-width: 780px;
+  margin: 0 auto 48px auto;
+  line-height: 1.6;
+  text-shadow: 0 2px 10px rgba(0,0,0,0.35);
+}
+
+/* GRID */
+.beneficia-grid {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 28px;
+}
+
+/* BASE DOS CARDS */
+.beneficia-card {
+  border-radius: 20px;
+  padding: 26px;
+  text-align: left;
+  box-shadow: 0 14px 30px rgba(0,0,0,0.22);
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+
+.beneficia-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 22px 45px rgba(0,0,0,0.28);
+}
+
+/* ÍCONES */
+.beneficia-icon {
+  font-size: 40px;
+  margin-bottom: 12px;
+}
+
+/* TÍTULOS DOS CARDS */
+.beneficia-card h3 {
+  font-size: 22px;
+  font-weight: 800;
+  margin: 10px 0 18px 0;
+}
+
+/* LISTA */
+.beneficia-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.beneficia-card ul li {
+  margin-bottom: 10px;
+  padding-left: 20px;
+  position: relative;
+  font-size: 16px;
+  font-weight: 600;
+  color: #222;
+}
+
+.beneficia-card ul li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 22px;
+  line-height: 16px;
+  color: rgba(0,0,0,0.6);
+}
+
+/* ====== CORES DOS CARDS ====== */
+
+.yellow-card {
+  background: #f5c727;
+  color: #311f00;
+}
+
+.purple-card {
+  background: #986094;
+  color: #2c2030;
+}
+
+.teal-card {
+  background: #2ca8cb;
+  color: #08343d;
+}
+
+/* ====== RESPONSIVIDADE ====== */
+
+@media (max-width: 980px) {
+  .beneficia-grid {
+    grid-template-columns: 1fr;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+}
+/* =========================================================
+   SEÇÃO: COMO FUNCIONA
+   ========================================================= */
+
+.funciona-section {
+  padding: 90px 0;
+  background: linear-gradient(
+    135deg,
+    #2c1242 0%,
+    #4a2761 40%,
+    #61315a 80%
+  );
+  color: #ffffff;
+}
+
+.funciona-inner {
+  text-align: center;
+}
+
+/* TÍTULO */
+.funciona-title {
+  font-size: 34px;
+  font-weight: 900;
+  margin-bottom: 16px;
+  text-shadow: 0 3px 14px rgba(0,0,0,0.45);
+}
+
+/* SUBTÍTULO */
+.funciona-sub {
+  font-size: 18px;
+  color: rgba(255,255,255,0.88);
+  max-width: 780px;
+  margin: 0 auto 48px auto;
+  line-height: 1.6;
+  text-shadow: 0 2px 10px rgba(0,0,0,0.35);
+}
+
+/* GRID */
+.funciona-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 28px;
+}
+
+/* CARD BASE */
+.funciona-card {
+  padding: 28px 20px;
+  border-radius: 18px;
+
+  background: rgba(255,255,255,0.10);
+  backdrop-filter: blur(6px);
+
+  border: 1px solid rgba(255,255,255,0.18);
+
+  box-shadow: 0 14px 36px rgba(0,0,0,0.30);
+  transition: transform .25s ease, box-shadow .25s ease;
+
+  text-align: left;
+}
+
+/* HOVER */
+.funciona-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 22px 50px rgba(0,0,0,0.40);
+}
+
+/* NÚMERO GRANDE */
+.funciona-num {
+  width: 60px;
+  height: 60px;
+  border-radius: 14px;
+
+  background: linear-gradient(135deg, #f5c727, #f2d254);
+  color: #311f00;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 28px;
+  font-weight: 900;
+
+  margin-bottom: 16px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+}
+
+/* TÍTULO DO CARD */
+.funciona-card h3 {
+  margin: 0 0 10px 0;
+  font-size: 20px;
+  font-weight: 800;
+  color: #f9dfff;
+}
+
+/* TEXTO DO CARD */
+.funciona-card p {
+  margin: 0;
+  color: rgba(255,255,255,0.85);
+  line-height: 1.5;
+  font-size: 15px;
+}
+
+/* ===== RESPONSIVIDADE ===== */
+/* Responsivo */
+@media (max-width: 1280px) {
+  .funciona-grid {
+    grid-template-columns: repeat(3,1fr);
+  }
+}
+
+@media (max-width: 900px) {
+  .funciona-grid {
+    grid-template-columns: repeat(2,1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .funciona-grid {
+    grid-template-columns: 1fr;
+  }
+}
+/* =========================================================
+   SEÇÃO: DEPOIMENTOS
+   ========================================================= */
+
+.depoimentos-section {
+  padding: 90px 0;
+  background: linear-gradient(
+    135deg,
+    #61315a 0%,
+    #7a3f83 40%,
+    #986094 80%
+  );
+  color: #ffffff;
+}
+
+.depo-inner {
+  text-align: center;
+}
+
+/* TÍTULO */
+.depo-title {
+  font-size: 34px;
+  font-weight: 900;
+  margin-bottom: 16px;
+  text-shadow: 0 3px 14px rgba(0,0,0,0.45);
+}
+
+/* SUB */
+.depo-sub {
+  font-size: 18px;
+  max-width: 760px;
+  margin: 0 auto 48px auto;
+  color: rgba(255,255,255,0.88);
+  line-height: 1.6;
+  text-shadow: 0 2px 10px rgba(0,0,0,0.35);
+}
+
+/* GRID */
+.depo-grid {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 26px;
+}
+
+/* CARD */
+.depo-card {
+  background: rgba(255,255,255,0.08);
+  padding: 28px;
+  border-radius: 18px;
+  text-align: left;
+
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(255,255,255,0.15);
+
+  box-shadow: 0 14px 36px rgba(0,0,0,0.30);
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+
+/* HOVER */
+.depo-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 22px 55px rgba(0,0,0,0.40);
+}
+
+/* QUOTE MARK */
+.depo-quote {
+  font-size: 50px;
+  color: var(--yellow);
+  line-height: 0.5;
+  font-weight: 900;
+  margin-bottom: 10px;
+}
+
+/* TEXTO DO DEPOIMENTO */
+.depo-text {
+  color: rgba(255,255,255,0.92);
+  font-size: 17px;
+  line-height: 1.55;
+  margin-bottom: 18px;
+}
+
+/* AUTOR */
+.depo-author {
+  color: rgba(255,255,255,0.75);
+  font-size: 15px;
+  font-weight: 700;
+}
+
+/* ===== RESPONSIVIDADE ===== */
+
+@media (max-width: 980px) {
+  .depo-grid {
+    grid-template-columns: 1fr;
+    max-width: 680px;
+    margin: 0 auto;
+  }
+}
+/* =========================================================
+   SEÇÃO: SOBRE A CLÍNICA
+   ========================================================= */
+
+.sobre-section {
+  padding: 90px 0;
+
+  background: linear-gradient(
+    135deg,
+    #2c1242 0%,
+    #4a2761 40%,
+    #61315a 90%
+  );
+
+  color: #ffffff;
+}
+
+.sobre-inner {
+  max-width: 1100px;
+}
+
+.sobre-content {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+/* TEXTOS */
+.sobre-title {
+  font-size: 34px;
+  font-weight: 900;
+  margin-bottom: 20px;
+  text-shadow: 0 3px 14px rgba(0,0,0,0.45);
+}
+
+.sobre-sub {
+  font-size: 18px;
+  line-height: 1.7;
+  margin-bottom: 28px;
+  color: rgba(255,255,255,0.88);
+}
+
+.sobre-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sobre-list li {
+  font-size: 17px;
+  padding-left: 28px;
+  margin-bottom: 14px;
+  font-weight: 600;
+  position: relative;
+}
+
+.sobre-list li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 22px;
+  color: var(--yellow);
+}
+
+/* IMAGEM */
+.sobre-image-wrapper {
+  background: rgba(255,255,255,0.12);
+  padding: 14px;
+  border-radius: 20px;
+
+  backdrop-filter: blur(6px);
+  box-shadow: 0 16px 45px rgba(0,0,0,0.45);
+}
+
+.sobre-image {
+  width: 100%;
+  border-radius: 16px;
+  display: block;
+  box-shadow: 0 18px 50px rgba(0,0,0,0.45);
+}
+
+/* RESPONSIVO */
+@media (max-width: 980px) {
+  .sobre-content {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .sobre-list li {
+    text-align: left;
+    margin-left: 20%;
+  }
+
+  .sobre-image-wrapper {
+    max-width: 440px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 640px) {
+  .sobre-list li {
+    margin-left: 0;
+  }
+
+  .sobre-image-wrapper {
+    padding: 10px;
+  }
+}
+/* =========================================================
+   SEÇÃO: LOCALIZAÇÃO E CONTATO
+   ========================================================= */
+
+/* =========================================================
+   SEÇÃO: LOCALIZAÇÃO E CONTATO (SEM MAPA)
+   ========================================================= */
+
+.contato-section {
+  padding: 90px 0;
+
+  background: linear-gradient(
+    135deg,
+    #4a1f57 0%,
+    #61315a 45%,
+    #2ca8cb 100%
+  );
+
+  color: #ffffff;
+}
+
+.contato-inner {
+  text-align: center;
+}
+
+/* TÍTULO */
+.contato-title {
+  font-size: 34px;
+  font-weight: 900;
+  margin-bottom: 16px;
+  text-shadow: 0 3px 14px rgba(0,0,0,0.45);
+}
+
+/* SUB */
+.contato-sub {
+  font-size: 18px;
+  max-width: 760px;
+  margin: 0 auto 48px auto;
+  color: rgba(255,255,255,0.88);
+  line-height: 1.6;
+  text-shadow: 0 2px 10px rgba(0,0,0,0.35);
+}
+
+/* GRID DE ENDEREÇOS */
+.enderecos-grid {
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 26px;
+  margin-bottom: 42px;
+}
+
+/* CARD DE ENDEREÇO */
+.endereco-card {
+  background: rgba(255,255,255,0.12);
+  border: 1px solid rgba(255,255,255,0.22);
+  padding: 26px;
+  border-radius: 20px;
+
+  backdrop-filter: blur(6px);
+  box-shadow: 0 16px 45px rgba(0,0,0,0.30);
+
+  transition: transform .25s ease, box-shadow .25s ease;
+  text-align: center;
+}
+
+.endereco-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 22px 55px rgba(0,0,0,0.40);
+}
+
+/* ÍCONES */
+.endereco-icone {
+  font-size: 38px;
+  margin-bottom: 10px;
+}
+
+/* TÍTULO DO CARD */
+.endereco-card h3 {
+  font-size: 20px;
+  font-weight: 800;
+  color: #f5c727;
+  margin-bottom: 6px;
+}
+
+/* DESCRIÇÃO */
+.endereco-card p {
+  margin: 0;
+  color: rgba(255,255,255,0.85);
+  font-size: 15px;
+}
+
+/* CTA WHATSAPP */
+.btn-contato {
+  display: inline-block;
+  background: #f5c727;
+  color: #311f00;
+  padding: 14px 22px;
+  text-decoration: none;
+  font-weight: 800;
+  border-radius: 10px;
+  font-size: 18px;
+
+  box-shadow: 0 6px 16px rgba(245,199,39,0.45);
+  transition: transform .18s, box-shadow .18s;
+}
+
+.btn-contato:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(245,199,39,0.55);
+}
+
+/* RESPONSIVIDADE */
+@media (max-width: 980px) {
+  .enderecos-grid {
+    grid-template-columns: repeat(2,1fr);
+  }
+}
+
+@media (max-width: 680px) {
+  .enderecos-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .btn-contato {
+    width: 100%;
+  }
+}
+
+/* =========================================================
+   CTA FINAL – CHAMADA DE CONVERSÃO
+   ========================================================= */
+
+.cta-final-section {
+  padding: 100px 0;
+
+  background: linear-gradient(
+    135deg,
+    #2ca8cb 0%,
+    #986094 45%,
+    #61315a 100%
+  );
+
+  text-align: center;
+  color: #ffffff;
+}
+
+.cta-final-inner {
+  max-width: 800px;
+}
+
+.cta-final-title {
+  font-size: 40px;
+  font-weight: 900;
+  margin-bottom: 20px;
+  line-height: 1.2;
+  text-shadow: 0 4px 18px rgba(0,0,0,0.45);
+}
+
+.cta-final-sub {
+  font-size: 20px;
+  color: rgba(255,255,255,0.92);
+  margin: 0 auto 38px auto;
+  line-height: 1.6;
+  text-shadow: 0 2px 10px rgba(0,0,0,0.35);
+}
+
+/* BOTÃO CTA FINAL */
+.cta-final-button {
+  display: inline-block;
+  background: #f5c727;
+  color: #311f00;
+  padding: 18px 32px;
+  font-size: 22px;
+  font-weight: 900;
+  border-radius: 14px;
+  text-decoration: none;
+
+  box-shadow: 0 10px 28px rgba(245,199,39,0.50);
+  transition: transform .18s, box-shadow .18s;
+}
+
+.cta-final-button:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 34px rgba(245,199,39,0.60);
+}
+
+/* RESPONSIVIDADE */
+@media (max-width: 600px) {
+  .cta-final-title {
+    font-size: 32px;
+  }
+
+  .cta-final-sub {
+    font-size: 17px;
+  }
+
+  .cta-final-button {
+    width: 100%;
+    font-size: 20px;
+    padding: 16px 22px;
+  }
+}
+/* Floating WA */
+.whatsapp-float{
+  position:fixed;right:18px;bottom:18px;width:64px;height:64px;border-radius:50%;background:linear-gradient(135deg,var(--teal),var(--accent));
+  display:flex;align-items:center;justify-content:center;color:white;font-size:26px;box-shadow:0 16px 46px rgba(0,0,0,0.35);z-index:999;
+}
+
+/* =========================================================
+   RODAPÉ PREMIUM
+   ========================================================= */
+
+.footer-section {
+  padding: 60px 0 30px 0;
+
+  background: linear-gradient(
+    135deg,
+    #2c1242 0%,
+    #4a2761 40%,
+    #61315a 80%
+  );
+
+  color: #ffffff;
+}
+
+.footer-inner {
+  text-align: center;
+}
+
+/* LOGO */
+.footer-logo {
+  height: 70px;
+  margin-bottom: 12px;
+
+  /* Glow suave para aparecer no fundo roxo */
+  filter: drop-shadow(0 0 8px rgba(255,255,255,0.4));
+}
+
+.footer-desc {
+  font-size: 15px;
+  color: rgba(255,255,255,0.82);
+  margin-bottom: 30px;
+}
+
+/* LINKS */
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 22px;
+  margin-bottom: 28px;
+  flex-wrap: wrap;
+}
+
+.footer-links a {
+  color: rgba(255,255,255,0.9);
+  text-decoration: none;
+  font-weight: 600;
+  transition: opacity .2s ease;
+}
+
+.footer-links a:hover {
+  opacity: 0.6;
+}
+
+/* COPYRIGHT */
+.footer-copy {
+  font-size: 14px;
+  color: rgba(255,255,255,0.75);
+  margin-top: 20px;
+  text-shadow: 0 2px 6px rgba(0,0,0,0.35);
+}
+
+/* RESPONSIVO */
+@media (max-width: 600px) {
+  .footer-logo {
+    height: 60px;
+  }
+
+  .footer-links {
+    flex-direction: column;
+    gap: 12px;
+  }
+}
