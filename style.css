@@ -601,15 +601,35 @@ a:focus, button:focus{
 .hidden{display:none !important}
 
 /* ===== FIX do menu não acompanhar ===== */
-.avaliacao-section,
-.avaliacao-inner,
-.avaliacao-card {
-    position: relative;
-    z-index: 0 !important;
+/* ===== FIX: header fixo para acompanhar a página SEM FALHAS ===== */
+.site-header {
+  position: fixed;      /* fixo no topo (mais robusto que sticky) */
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 99999999 !important;
+  width: 100%;
 }
 
-.site-header {
-    position: sticky;
-    top: 0;
-    z-index: 9999999 !important;
+/* evita que o conteúdo fique embaixo do header */
+:root {
+  --site-header-height: 76px; /* ajuste se seu header tiver outra altura */
 }
+
+/* aplica padding-top ao container principal (para não cobrir o conteúdo) */
+body > .container, /* em caso de uso direto */
+main, section, .hero, .avaliacao-section {
+  /* só adiciona o espaçamento se ainda não existir */
+  padding-top: calc(var(--site-header-height) + 12px);
+}
+
+/* ajuste específico para a hero (mantém espaçamento visual) */
+.hero { padding-top: calc(var(--site-header-height) + 40px); }
+
+/* mobile nav precisa considerar header fixo */
+.mobile-nav {
+  top: calc(var(--site-header-height) + 8px);
+}
+
+/* quando quiser remover o padding extra para elementos que já tratam o espaçamento, 
+   reduza / comente as regras acima. */
