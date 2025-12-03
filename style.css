@@ -207,6 +207,10 @@ a{color:inherit}
   margin-bottom: 4px;
   text-shadow: 0 6px 26px rgba(0,0,0,0.55);
 }
+.hero-subtitle{
+  font-size: 30px;
+  color: #2ca8cb;
+}
 
 .hero-sub{
   font-size:18px;
@@ -403,6 +407,10 @@ a{color:inherit}
 .teal-card{
   background:#2ca8cb;
   color:#063038;
+}
+.elderly-card {
+  background: #7BCFAF; /* verde claro profissional */
+  color: #000;
 }
 
 /* === RESPONSIVIDADE === */
